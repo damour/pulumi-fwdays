@@ -1,0 +1,11 @@
+encryptionsalt: v1:B9sfGl0z4/4=:v1:qlsey0kbq/vkFBE8:MO2M+4lCtNNb9rgIaSxm08ublujIxA==
+config:
+  gcp:project: tactical-orbit-366415
+  pulumi-ts:dbConfig:
+    databaseVersion: POSTGRES_15
+    postgresPassword:
+      secure: v1:mzCKnfBp0FCrqepp:iVuQFluPNu3lqmqSWO/HjWesiw4HkQ==
+    schemas:
+      - test1
+      - test2
+  pulumi-ts:k8sVersion: 1.29.1-gke.1575000

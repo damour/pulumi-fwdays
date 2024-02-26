@@ -1,0 +1,20 @@
+{
+    "kind": "update",
+    "startTime": 1708861248,
+    "message": "",
+    "environment": {
+        "exec.kind": "cli",
+        "pulumi.arch": "arm64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "darwin",
+        "pulumi.version": "v3.102.0",
+        "updatePlan": "false"
+    },
+    "config": {},
+    "version": 0,
+    "result": "failed",
+    "endTime": 1708861250,
+    "resourceChanges": {
+        "create": 1
+    }
+}

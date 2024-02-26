@@ -1,0 +1,766 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/pulumi-ts/dev",
+        "latest": {
+            "manifest": {
+                "time": "2024-02-25T20:24:02.725747+02:00",
+                "magic": "79b21111b057cd6762023edb0f73ac137b81a6c92f656b0dc4741a8258329594",
+                "version": "v3.102.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:B9sfGl0z4/4=:v1:qlsey0kbq/vkFBE8:MO2M+4lCtNNb9rgIaSxm08ublujIxA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "db": {
+                            "publicIpAddress": "35.192.165.245",
+                            "urn": "urn:pulumi:dev::pulumi-ts::howly:gcp:ApplicationDB::my-db"
+                        },
+                        "dbIP": "35.192.165.245",
+                        "k8sCluster": "my-cluster-65fcdbc"
+                    },
+                    "created": "2024-02-25T11:40:49.475417Z",
+                    "modified": "2024-02-25T11:40:49.475417Z",
+                    "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::howly:gcp:ApplicationDB::my-db",
+                    "custom": false,
+                    "type": "howly:gcp:ApplicationDB",
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "created": "2024-02-25T12:33:53.856323Z",
+                    "modified": "2024-02-25T12:33:53.856323Z",
+                    "sourcePosition": "project:///index.ts#13,19"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0",
+                    "custom": true,
+                    "id": "c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "type": "pulumi:providers:gcp",
+                    "inputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "outputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "created": "2024-02-25T11:40:49.761966Z",
+                    "modified": "2024-02-25T11:41:13.884147Z"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::howly:gcp:ApplicationDB$gcp:sql/databaseInstance:DatabaseInstance::main",
+                    "custom": true,
+                    "id": "main-4822060",
+                    "type": "gcp:sql/databaseInstance:DatabaseInstance",
+                    "inputs": {
+                        "__defaults": [
+                            "deletionProtection",
+                            "name"
+                        ],
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": true,
+                        "name": "main-4822060",
+                        "region": "us-central1",
+                        "settings": {
+                            "__defaults": [
+                                "activationPolicy",
+                                "availabilityType",
+                                "diskAutoresize",
+                                "diskAutoresizeLimit",
+                                "diskType",
+                                "edition",
+                                "pricingPlan"
+                            ],
+                            "activationPolicy": "ALWAYS",
+                            "availabilityType": "ZONAL",
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "pricingPlan": "PER_USE",
+                            "tier": "db-f1-micro"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":2400000000000,\"delete\":1800000000000,\"update\":1800000000000}}",
+                        "availableMaintenanceVersions": [],
+                        "connectionName": "tactical-orbit-366415:us-central1:main-4822060",
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": true,
+                        "dnsName": "",
+                        "firstIpAddress": "35.192.165.245",
+                        "id": "main-4822060",
+                        "instanceType": "CLOUD_SQL_INSTANCE",
+                        "ipAddresses": [
+                            {
+                                "ipAddress": "35.192.165.245",
+                                "timeToRetire": "",
+                                "type": "PRIMARY"
+                            },
+                            {
+                                "ipAddress": "34.171.141.39",
+                                "timeToRetire": "",
+                                "type": "OUTGOING"
+                            }
+                        ],
+                        "maintenanceVersion": "POSTGRES_15_4.R20230830.01_07",
+                        "masterInstanceName": "",
+                        "name": "main-4822060",
+                        "privateIpAddress": "",
+                        "project": "tactical-orbit-366415",
+                        "pscServiceAttachmentLink": "",
+                        "publicIpAddress": "35.192.165.245",
+                        "region": "us-central1",
+                        "replicaConfiguration": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:MHyvRD7AI0ystuc/:Ypf7ypwLMXu1Zd5MtARXE1ucXvY="
+                        },
+                        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/tactical-orbit-366415/instances/main-4822060",
+                        "serverCaCerts": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:ntz/RIonxS5ra+U4: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"
+                        },
+                        "serviceAccountEmailAddress": "p143825474172-xma9qu@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+                        "settings": {
+                            "activationPolicy": "ALWAYS",
+                            "activeDirectoryConfig": null,
+                            "advancedMachineFeatures": null,
+                            "availabilityType": "ZONAL",
+                            "backupConfiguration": {
+                                "backupRetentionSettings": {
+                                    "retainedBackups": 7,
+                                    "retentionUnit": "COUNT"
+                                },
+                                "binaryLogEnabled": false,
+                                "enabled": false,
+                                "location": "",
+                                "pointInTimeRecoveryEnabled": false,
+                                "startTime": "09:00",
+                                "transactionLogRetentionDays": 7
+                            },
+                            "collation": "",
+                            "connectorEnforcement": "NOT_REQUIRED",
+                            "dataCacheConfig": null,
+                            "databaseFlags": [],
+                            "deletionProtectionEnabled": false,
+                            "denyMaintenancePeriod": null,
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskSize": 10,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "insightsConfig": null,
+                            "ipConfiguration": {
+                                "allocatedIpRange": "",
+                                "authorizedNetworks": [],
+                                "enablePrivatePathForGoogleCloudServices": false,
+                                "ipv4Enabled": true,
+                                "privateNetwork": "",
+                                "pscConfigs": [],
+                                "requireSsl": false,
+                                "sslMode": ""
+                            },
+                            "locationPreference": {
+                                "followGaeApplication": "",
+                                "secondaryZone": "",
+                                "zone": "us-central1-a"
+                            },
+                            "maintenanceWindow": null,
+                            "passwordValidationPolicy": null,
+                            "pricingPlan": "PER_USE",
+                            "sqlServerAuditConfig": null,
+                            "tier": "db-f1-micro",
+                            "timeZone": "",
+                            "userLabels": {},
+                            "version": 1
+                        }
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::howly:gcp:ApplicationDB::my-db",
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "databaseVersion": null,
+                        "region": null,
+                        "settings": null
+                    },
+                    "additionalSecretOutputs": [
+                        "replicaConfiguration",
+                        "rootPassword",
+                        "serverCaCerts"
+                    ],
+                    "created": "2024-02-25T13:36:04.690002Z",
+                    "modified": "2024-02-25T13:36:04.690002Z",
+                    "sourcePosition": "project:///db.ts#19,20"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::gcp:projects/service:Service::container",
+                    "custom": true,
+                    "id": "tactical-orbit-366415/container.googleapis.com",
+                    "type": "gcp:projects/service:Service",
+                    "inputs": {
+                        "__defaults": [
+                            "disableOnDestroy"
+                        ],
+                        "disableDependentServices": true,
+                        "disableOnDestroy": true,
+                        "service": "container.googleapis.com"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":1200000000000,\"read\":600000000000,\"update\":1200000000000}}",
+                        "disableDependentServices": true,
+                        "disableOnDestroy": true,
+                        "id": "tactical-orbit-366415/container.googleapis.com",
+                        "project": "tactical-orbit-366415",
+                        "service": "container.googleapis.com"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "disableDependentServices": null,
+                        "service": null
+                    },
+                    "created": "2024-02-25T12:40:30.683651Z",
+                    "modified": "2024-02-25T12:40:30.683651Z",
+                    "sourcePosition": "project:///k8s.ts#7,26"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::gcp:container/cluster:Cluster::my-cluster",
+                    "custom": true,
+                    "id": "projects/tactical-orbit-366415/locations/us-central1-a/clusters/my-cluster-65fcdbc",
+                    "type": "gcp:container/cluster:Cluster",
+                    "inputs": {
+                        "__defaults": [
+                            "deletionProtection",
+                            "enableFqdnNetworkPolicy",
+                            "enableKubernetesAlpha",
+                            "enableL4IlbSubsetting",
+                            "enableLegacyAbac",
+                            "enableMultiNetworking",
+                            "enableShieldedNodes",
+                            "name",
+                            "network"
+                        ],
+                        "deletionProtection": true,
+                        "enableFqdnNetworkPolicy": false,
+                        "enableKubernetesAlpha": false,
+                        "enableL4IlbSubsetting": false,
+                        "enableLegacyAbac": false,
+                        "enableMultiNetworking": false,
+                        "enableShieldedNodes": true,
+                        "initialNodeCount": 2,
+                        "location": "us-central1-a",
+                        "minMasterVersion": "1.29.1-gke.1575000",
+                        "name": "my-cluster-65fcdbc",
+                        "network": "default",
+                        "nodeConfig": {
+                            "__defaults": [
+                                "preemptible",
+                                "spot"
+                            ],
+                            "machineType": "n1-standard-1",
+                            "oauthScopes": [
+                                "https://www.googleapis.com/auth/compute",
+                                "https://www.googleapis.com/auth/devstorage.read_only",
+                                "https://www.googleapis.com/auth/logging.write",
+                                "https://www.googleapis.com/auth/monitoring"
+                            ],
+                            "preemptible": false,
+                            "spot": false
+                        },
+                        "nodeVersion": "1.29.1-gke.1575000"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":2400000000000,\"delete\":2400000000000,\"read\":2400000000000,\"update\":3600000000000},\"schema_version\":\"2\"}",
+                        "addonsConfig": {
+                            "cloudrunConfig": null,
+                            "configConnectorConfig": null,
+                            "dnsCacheConfig": null,
+                            "gcePersistentDiskCsiDriverConfig": {
+                                "enabled": true
+                            },
+                            "gcpFilestoreCsiDriverConfig": null,
+                            "gcsFuseCsiDriverConfig": null,
+                            "gkeBackupAgentConfig": null,
+                            "horizontalPodAutoscaling": null,
+                            "httpLoadBalancing": null,
+                            "istioConfig": null,
+                            "kalmConfig": null,
+                            "networkPolicyConfig": {
+                                "disabled": true
+                            }
+                        },
+                        "authenticatorGroupsConfig": null,
+                        "binaryAuthorization": {
+                            "enabled": false,
+                            "evaluationMode": ""
+                        },
+                        "clusterAutoscaling": {
+                            "autoProvisioningDefaults": null,
+                            "autoscalingProfile": "BALANCED",
+                            "enabled": false,
+                            "resourceLimits": []
+                        },
+                        "clusterIpv4Cidr": "10.80.0.0/14",
+                        "clusterTelemetry": {
+                            "type": "ENABLED"
+                        },
+                        "confidentialNodes": null,
+                        "costManagementConfig": null,
+                        "databaseEncryption": {
+                            "keyName": "",
+                            "state": "DECRYPTED"
+                        },
+                        "datapathProvider": "",
+                        "defaultMaxPodsPerNode": 110,
+                        "defaultSnatStatus": {
+                            "disabled": false
+                        },
+                        "deletionProtection": true,
+                        "description": "",
+                        "dnsConfig": null,
+                        "enableAutopilot": false,
+                        "enableFqdnNetworkPolicy": false,
+                        "enableIntranodeVisibility": false,
+                        "enableK8sBetaApis": null,
+                        "enableKubernetesAlpha": false,
+                        "enableL4IlbSubsetting": false,
+                        "enableLegacyAbac": false,
+                        "enableMultiNetworking": false,
+                        "enableShieldedNodes": true,
+                        "enableTpu": false,
+                        "endpoint": "34.72.43.125",
+                        "fleet": null,
+                        "gatewayApiConfig": null,
+                        "id": "projects/tactical-orbit-366415/locations/us-central1-a/clusters/my-cluster-65fcdbc",
+                        "identityServiceConfig": null,
+                        "initialNodeCount": 2,
+                        "ipAllocationPolicy": {
+                            "additionalPodRangesConfig": null,
+                            "clusterIpv4CidrBlock": "10.80.0.0/14",
+                            "clusterSecondaryRangeName": "gke-my-cluster-65fcdbc-pods-31cbd00c",
+                            "podCidrOverprovisionConfig": {
+                                "disabled": false
+                            },
+                            "servicesIpv4CidrBlock": "10.84.0.0/20",
+                            "servicesSecondaryRangeName": "gke-my-cluster-65fcdbc-services-31cbd00c",
+                            "stackType": "IPV4"
+                        },
+                        "labelFingerprint": "a9dc16a7",
+                        "location": "us-central1-a",
+                        "loggingConfig": {
+                            "enableComponents": [
+                                "SYSTEM_COMPONENTS",
+                                "WORKLOADS"
+                            ]
+                        },
+                        "loggingService": "logging.googleapis.com/kubernetes",
+                        "maintenancePolicy": null,
+                        "masterAuth": {
+                            "clientCertificate": "",
+                            "clientCertificateConfig": {
+                                "issueClientCertificate": false
+                            },
+                            "clientKey": {
+                                "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                                "ciphertext": "v1:LP59RUjzvjJK0l+l:Nt/BdesC7QAbFoEELMbr9hp4"
+                            },
+                            "clusterCaCertificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVMVENDQXBXZ0F3SUJBZ0lSQU8yU1pGUmlEclQvNXV2VXQwSTJ3ejR3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa09Ua3lZVEEyTWpFdFpEUTJNQzAwTldOaUxXSTRNR0l0TURZelptRXlZak5sWkdJegpNQ0FYRFRJME1ESXlOVEV4TkRBek1sb1lEekl3TlRRd01qRTNNVEkwTURNeVdqQXZNUzB3S3dZRFZRUURFeVE1Ck9USmhNRFl5TVMxa05EWXdMVFExWTJJdFlqZ3dZaTB3TmpObVlUSmlNMlZrWWpNd2dnR2lNQTBHQ1NxR1NJYjMKRFFFQkFRVUFBNElCandBd2dnR0tBb0lCZ1FESUt4eHFnVDZnOXlBNDVveFIwOEtOZTJRcEp1SzJqQ2g3SkFBdAp3U0JsSTU5MjRuMW54VU9nNVFTNUVrRlA2VkZzeW9SdlA0YWQyeGcycW5SMEtvRkYxZUw1L0M4SGlRalBydE5kCnJrRVBMUEM4NThhVDB3RUVaZDQzUDBwRGM1dXhQbkRjQStIeUo4aEtUYzZ2TnFoTWs1aFVuczFCMVVVdWlxV2oKWHFCc3V4YzJtUWZyM0I3NUE2TWNmQ2xIVmdBSmxvUVBtWGJuUE1XMEwvTCthZm9iWGZRQ1JBVWZjQmxMdDlUdgpLaXhYU2VwNUgwa3ZmOFVMQ2w3VWpJclJZSElocWxocVN3L0pIVHVOR2RONi9mUUJiZ0ZEa3kxZ0FQcDA3RCtICldLUTRQWmFjMklCazJKUTBMS2FsS3NsMGVRSlZFTTRPQVZuTUlsN0RhTXpjdEh1Y0MwNXRhNlpwMTY1a25LV2gKV0pSK0Vja0pTazE4cUVrRHlhczZTbVNIbCtNRHJXUmlhS1I5WTgvaE5PeHNvaDdRMEUrazc1eDBRbFpJaytiRApzdC93YnZKdFByZjg0eVdtdjRRZUtjRVA2dmZzSE5ibi9HUk01RXQ0dEVGd2JGc3htOFFMZEwwM3AxZ0NJUTk5Ck0yZVJrUzJBY3pNRHlONzVWTFJzYjdaMUFTTUNBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGRWNZZHF5Tmh6QmhEVjA3a3JxdHNLL3BqMVJGTUEwRwpDU3FHU0liM0RRRUJDd1VBQTRJQmdRQU42em9tajUyK3NYNTRwVFFGakxYaFMvdllZVlhCY1EycFB5RXBPNXkyCmU5aW1DbVRxNUZXOUMzVVA5MHpEYWxHT2dpQmZpc0IyVTdnbWRDbERiNmZ1NEh5end2eWIwQXlPRlBiK1JrSG8KbXVyMlVXbXpQZGJpSUxMWStST3J1cU1Da0trQTlBeEhGV3dqZjFZNWVhOXp2K1RBVDYvYXNkUG9ia2E2d2JLQgowSFNNYlBOeVhJeUhQUnR0c0FFdUdEWlREcHNQTGE0dmFETXpKdVd5N3JMSjFyVFBkQnlPVFQ0cERBNHRGc0JiCm9ZOGM0NFRJeGYwTHp5T1I0dExMOStoNWdqczZtOGpsZ2tualF2djMzWFNwMzMxNmgzbVprcGRBZHhDVm1xa0IKS3YxeGlRRC9JNE1wWVpTUkU1QXdNcjJ5dUhBcUZFaVUxK2htZXdXV0VjNDgyS3BHTE5yK0grZ3l4RGo3ejhYWQowQkVueXlFd2xCRmNtUStoS2xsZjROSEVaaEw2M0FHeWNJc3hmUnNEeWhyVkxaWllIV0VTSTFZaWpvc3V3WDVECmdTdzJTcU5VMVRPY0NTYmdvb1pnWjZEY3dGQ3p0dkJRL3ZISVVWUmlQV0FoQkJTREROOWVXQkVxNDdydVVkNDkKaStrVnlGVTNzbXN6Y3pJSFYreEs1bmc9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+                        },
+                        "masterAuthorizedNetworksConfig": null,
+                        "masterVersion": "1.29.1-gke.1575000",
+                        "meshCertificates": null,
+                        "minMasterVersion": "1.29.1-gke.1575000",
+                        "monitoringConfig": {
+                            "advancedDatapathObservabilityConfigs": [
+                                {
+                                    "enableMetrics": false,
+                                    "enableRelay": false,
+                                    "relayMode": "DISABLED"
+                                }
+                            ],
+                            "enableComponents": [
+                                "SYSTEM_COMPONENTS"
+                            ],
+                            "managedPrometheus": {
+                                "enabled": true
+                            }
+                        },
+                        "monitoringService": "monitoring.googleapis.com/kubernetes",
+                        "name": "my-cluster-65fcdbc",
+                        "network": "projects/tactical-orbit-366415/global/networks/default",
+                        "networkPolicy": {
+                            "enabled": false,
+                            "provider": "PROVIDER_UNSPECIFIED"
+                        },
+                        "networkingMode": "VPC_NATIVE",
+                        "nodeConfig": {
+                            "advancedMachineFeatures": null,
+                            "bootDiskKmsKey": "",
+                            "confidentialNodes": null,
+                            "diskSizeGb": 100,
+                            "diskType": "pd-balanced",
+                            "effectiveTaints": [],
+                            "enableConfidentialStorage": false,
+                            "ephemeralStorageConfig": null,
+                            "ephemeralStorageLocalSsdConfig": null,
+                            "fastSocket": null,
+                            "gcfsConfig": null,
+                            "guestAccelerators": [],
+                            "gvnic": null,
+                            "hostMaintenancePolicy": null,
+                            "imageType": "COS_CONTAINERD",
+                            "kubeletConfig": null,
+                            "labels": {},
+                            "linuxNodeConfig": null,
+                            "localNvmeSsdBlockConfig": null,
+                            "localSsdCount": 0,
+                            "loggingVariant": "DEFAULT",
+                            "machineType": "n1-standard-1",
+                            "metadata": {
+                                "disable-legacy-endpoints": "true"
+                            },
+                            "minCpuPlatform": "",
+                            "nodeGroup": "",
+                            "oauthScopes": [
+                                "https://www.googleapis.com/auth/monitoring",
+                                "https://www.googleapis.com/auth/devstorage.read_only",
+                                "https://www.googleapis.com/auth/logging.write",
+                                "https://www.googleapis.com/auth/compute"
+                            ],
+                            "preemptible": false,
+                            "reservationAffinity": null,
+                            "resourceLabels": {},
+                            "sandboxConfig": null,
+                            "serviceAccount": "default",
+                            "shieldedInstanceConfig": {
+                                "enableIntegrityMonitoring": true,
+                                "enableSecureBoot": false
+                            },
+                            "soleTenantConfig": null,
+                            "spot": false,
+                            "tags": [],
+                            "taints": [],
+                            "workloadMetadataConfig": null
+                        },
+                        "nodeLocations": [],
+                        "nodePoolAutoConfig": null,
+                        "nodePoolDefaults": {
+                            "nodeConfigDefaults": {
+                                "gcfsConfig": null,
+                                "loggingVariant": "DEFAULT"
+                            }
+                        },
+                        "nodePools": [
+                            {
+                                "autoscaling": null,
+                                "initialNodeCount": 2,
+                                "instanceGroupUrls": [
+                                    "https://www.googleapis.com/compute/v1/projects/tactical-orbit-366415/zones/us-central1-a/instanceGroupManagers/gke-my-cluster-65fcdbc-default-pool-22b68fc8-grp"
+                                ],
+                                "managedInstanceGroupUrls": [
+                                    "https://www.googleapis.com/compute/beta/projects/tactical-orbit-366415/zones/us-central1-a/instanceGroups/gke-my-cluster-65fcdbc-default-pool-22b68fc8-grp"
+                                ],
+                                "management": {
+                                    "autoRepair": true,
+                                    "autoUpgrade": true
+                                },
+                                "maxPodsPerNode": 110,
+                                "name": "default-pool",
+                                "namePrefix": "",
+                                "networkConfig": {
+                                    "additionalNodeNetworkConfigs": [],
+                                    "additionalPodNetworkConfigs": [],
+                                    "createPodRange": false,
+                                    "enablePrivateNodes": false,
+                                    "networkPerformanceConfig": null,
+                                    "podCidrOverprovisionConfig": null,
+                                    "podIpv4CidrBlock": "10.80.0.0/14",
+                                    "podRange": "gke-my-cluster-65fcdbc-pods-31cbd00c"
+                                },
+                                "nodeConfig": {
+                                    "advancedMachineFeatures": null,
+                                    "bootDiskKmsKey": "",
+                                    "confidentialNodes": null,
+                                    "diskSizeGb": 100,
+                                    "diskType": "pd-balanced",
+                                    "effectiveTaints": [],
+                                    "enableConfidentialStorage": false,
+                                    "ephemeralStorageConfig": null,
+                                    "ephemeralStorageLocalSsdConfig": null,
+                                    "fastSocket": null,
+                                    "gcfsConfig": null,
+                                    "guestAccelerators": [],
+                                    "gvnic": null,
+                                    "hostMaintenancePolicy": null,
+                                    "imageType": "COS_CONTAINERD",
+                                    "kubeletConfig": null,
+                                    "labels": {},
+                                    "linuxNodeConfig": null,
+                                    "localNvmeSsdBlockConfig": null,
+                                    "localSsdCount": 0,
+                                    "loggingVariant": "DEFAULT",
+                                    "machineType": "n1-standard-1",
+                                    "metadata": {
+                                        "disable-legacy-endpoints": "true"
+                                    },
+                                    "minCpuPlatform": "",
+                                    "nodeGroup": "",
+                                    "oauthScopes": [
+                                        "https://www.googleapis.com/auth/monitoring",
+                                        "https://www.googleapis.com/auth/devstorage.read_only",
+                                        "https://www.googleapis.com/auth/logging.write",
+                                        "https://www.googleapis.com/auth/compute"
+                                    ],
+                                    "preemptible": false,
+                                    "reservationAffinity": null,
+                                    "resourceLabels": {},
+                                    "sandboxConfig": null,
+                                    "serviceAccount": "default",
+                                    "shieldedInstanceConfig": {
+                                        "enableIntegrityMonitoring": true,
+                                        "enableSecureBoot": false
+                                    },
+                                    "soleTenantConfig": null,
+                                    "spot": false,
+                                    "tags": [],
+                                    "taints": [],
+                                    "workloadMetadataConfig": null
+                                },
+                                "nodeCount": 2,
+                                "nodeLocations": [
+                                    "us-central1-a"
+                                ],
+                                "placementPolicy": null,
+                                "queuedProvisioning": null,
+                                "upgradeSettings": {
+                                    "blueGreenSettings": null,
+                                    "maxSurge": 1,
+                                    "maxUnavailable": 0,
+                                    "strategy": "SURGE"
+                                },
+                                "version": "1.29.1-gke.1575000"
+                            }
+                        ],
+                        "nodeVersion": "1.29.1-gke.1575000",
+                        "notificationConfig": {
+                            "pubsub": {
+                                "enabled": false,
+                                "filter": null,
+                                "topic": ""
+                            }
+                        },
+                        "podSecurityPolicyConfig": {
+                            "enabled": false
+                        },
+                        "privateClusterConfig": {
+                            "enablePrivateEndpoint": false,
+                            "enablePrivateNodes": false,
+                            "masterGlobalAccessConfig": {
+                                "enabled": false
+                            },
+                            "masterIpv4CidrBlock": "",
+                            "peeringName": "",
+                            "privateEndpoint": "10.128.0.2",
+                            "privateEndpointSubnetwork": "",
+                            "publicEndpoint": "34.72.43.125"
+                        },
+                        "privateIpv6GoogleAccess": "",
+                        "project": "tactical-orbit-366415",
+                        "protectConfig": {
+                            "workloadConfig": {
+                                "auditMode": "BASIC"
+                            },
+                            "workloadVulnerabilityMode": "WORKLOAD_VULNERABILITY_MODE_UNSPECIFIED"
+                        },
+                        "releaseChannel": {
+                            "channel": "REGULAR"
+                        },
+                        "resourceLabels": {},
+                        "resourceUsageExportConfig": null,
+                        "securityPostureConfig": {
+                            "mode": "BASIC",
+                            "vulnerabilityMode": "VULNERABILITY_MODE_UNSPECIFIED"
+                        },
+                        "selfLink": "https://container.googleapis.com/v1beta1/projects/tactical-orbit-366415/zones/us-central1-a/clusters/my-cluster-65fcdbc",
+                        "serviceExternalIpsConfig": {
+                            "enabled": false
+                        },
+                        "servicesIpv4Cidr": "10.84.0.0/20",
+                        "subnetwork": "projects/tactical-orbit-366415/regions/us-central1/subnetworks/default",
+                        "tpuIpv4CidrBlock": "",
+                        "verticalPodAutoscaling": null,
+                        "workloadAltsConfig": null,
+                        "workloadIdentityConfig": null
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-ts::gcp:projects/service:Service::container"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "initialNodeCount": null,
+                        "location": null,
+                        "minMasterVersion": null,
+                        "nodeConfig": null,
+                        "nodeVersion": null
+                    },
+                    "created": "2024-02-25T12:48:06.073048Z",
+                    "modified": "2024-02-25T12:48:06.073048Z",
+                    "sourcePosition": "project:///k8s.ts#12,24"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::gcp:sql/databaseInstance:DatabaseInstance::main",
+                    "custom": true,
+                    "id": "main-768796e",
+                    "type": "gcp:sql/databaseInstance:DatabaseInstance",
+                    "inputs": {
+                        "__defaults": [
+                            "deletionProtection",
+                            "name"
+                        ],
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": false,
+                        "name": "main-768796e",
+                        "region": "us-central1",
+                        "settings": {
+                            "__defaults": [
+                                "activationPolicy",
+                                "availabilityType",
+                                "diskAutoresize",
+                                "diskAutoresizeLimit",
+                                "diskType",
+                                "edition",
+                                "pricingPlan"
+                            ],
+                            "activationPolicy": "ALWAYS",
+                            "availabilityType": "ZONAL",
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "pricingPlan": "PER_USE",
+                            "tier": "db-f1-micro"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":2400000000000,\"delete\":1800000000000,\"update\":1800000000000}}",
+                        "availableMaintenanceVersions": [],
+                        "connectionName": "tactical-orbit-366415:us-central1:main-768796e",
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": true,
+                        "dnsName": "",
+                        "firstIpAddress": "34.132.107.111",
+                        "id": "main-768796e",
+                        "instanceType": "CLOUD_SQL_INSTANCE",
+                        "ipAddresses": [
+                            {
+                                "ipAddress": "34.132.107.111",
+                                "timeToRetire": "",
+                                "type": "PRIMARY"
+                            },
+                            {
+                                "ipAddress": "34.68.29.159",
+                                "timeToRetire": "",
+                                "type": "OUTGOING"
+                            }
+                        ],
+                        "maintenanceVersion": "POSTGRES_15_4.R20230830.01_07",
+                        "masterInstanceName": "",
+                        "name": "main-768796e",
+                        "privateIpAddress": "",
+                        "project": "tactical-orbit-366415",
+                        "pscServiceAttachmentLink": "",
+                        "publicIpAddress": "34.132.107.111",
+                        "region": "us-central1",
+                        "replicaConfiguration": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:RZ/spsSG3NT+Rv1+:gXKTqEOGS7l+6qJm/+3XT2JTzm0="
+                        },
+                        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/tactical-orbit-366415/instances/main-768796e",
+                        "serverCaCerts": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:CtajQSRoAYswfr1d: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"
+                        },
+                        "serviceAccountEmailAddress": "p143825474172-xwpbo9@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+                        "settings": {
+                            "activationPolicy": "ALWAYS",
+                            "activeDirectoryConfig": null,
+                            "advancedMachineFeatures": null,
+                            "availabilityType": "ZONAL",
+                            "backupConfiguration": {
+                                "backupRetentionSettings": {
+                                    "retainedBackups": 7,
+                                    "retentionUnit": "COUNT"
+                                },
+                                "binaryLogEnabled": false,
+                                "enabled": false,
+                                "location": "",
+                                "pointInTimeRecoveryEnabled": false,
+                                "startTime": "10:00",
+                                "transactionLogRetentionDays": 7
+                            },
+                            "collation": "",
+                            "connectorEnforcement": "NOT_REQUIRED",
+                            "dataCacheConfig": null,
+                            "databaseFlags": [],
+                            "deletionProtectionEnabled": false,
+                            "denyMaintenancePeriod": null,
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskSize": 10,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "insightsConfig": null,
+                            "ipConfiguration": {
+                                "allocatedIpRange": "",
+                                "authorizedNetworks": [],
+                                "enablePrivatePathForGoogleCloudServices": false,
+                                "ipv4Enabled": true,
+                                "privateNetwork": "",
+                                "pscConfigs": [],
+                                "requireSsl": false,
+                                "sslMode": ""
+                            },
+                            "locationPreference": {
+                                "followGaeApplication": "",
+                                "secondaryZone": "",
+                                "zone": "us-central1-c"
+                            },
+                            "maintenanceWindow": null,
+                            "passwordValidationPolicy": null,
+                            "pricingPlan": "PER_USE",
+                            "sqlServerAuditConfig": null,
+                            "tier": "db-f1-micro",
+                            "timeZone": "",
+                            "userLabels": {},
+                            "version": 1
+                        }
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "databaseVersion": null,
+                        "region": null,
+                        "settings": null
+                    },
+                    "additionalSecretOutputs": [
+                        "replicaConfiguration",
+                        "rootPassword",
+                        "serverCaCerts"
+                    ],
+                    "created": "2024-02-25T11:58:15.581724Z",
+                    "modified": "2024-02-25T11:58:15.581724Z",
+                    "sourcePosition": "project:///db.ts#17,20"
+                }
+            ]
+        }
+    }
+}

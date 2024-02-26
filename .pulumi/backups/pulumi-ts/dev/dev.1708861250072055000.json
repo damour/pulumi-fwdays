@@ -1,0 +1,43 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/pulumi-ts/dev",
+        "latest": {
+            "manifest": {
+                "time": "2024-02-25T13:40:50.062455+02:00",
+                "magic": "79b21111b057cd6762023edb0f73ac137b81a6c92f656b0dc4741a8258329594",
+                "version": "v3.102.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:B9sfGl0z4/4=:v1:qlsey0kbq/vkFBE8:MO2M+4lCtNNb9rgIaSxm08ublujIxA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "created": "2024-02-25T11:40:49.475417Z",
+                    "modified": "2024-02-25T11:40:49.475417Z",
+                    "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0",
+                    "custom": true,
+                    "id": "c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "type": "pulumi:providers:gcp",
+                    "inputs": {
+                        "version": "7.11.0"
+                    },
+                    "outputs": {
+                        "version": "7.11.0"
+                    },
+                    "created": "2024-02-25T11:40:49.761966Z",
+                    "modified": "2024-02-25T11:40:49.761966Z"
+                }
+            ]
+        }
+    }
+}

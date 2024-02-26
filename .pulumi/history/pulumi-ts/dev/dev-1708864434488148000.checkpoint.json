@@ -1,0 +1,201 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/pulumi-ts/dev",
+        "latest": {
+            "manifest": {
+                "time": "2024-02-25T14:33:54.478244+02:00",
+                "magic": "79b21111b057cd6762023edb0f73ac137b81a6c92f656b0dc4741a8258329594",
+                "version": "v3.102.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:B9sfGl0z4/4=:v1:qlsey0kbq/vkFBE8:MO2M+4lCtNNb9rgIaSxm08ublujIxA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "dbIP": "34.132.107.111"
+                    },
+                    "created": "2024-02-25T11:40:49.475417Z",
+                    "modified": "2024-02-25T11:40:49.475417Z",
+                    "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::howly:gcp:ApplicationDB::my-db",
+                    "custom": false,
+                    "type": "howly:gcp:ApplicationDB",
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "created": "2024-02-25T12:33:53.856323Z",
+                    "modified": "2024-02-25T12:33:53.856323Z",
+                    "sourcePosition": "project:///index.ts#8,19"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0",
+                    "custom": true,
+                    "id": "c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "type": "pulumi:providers:gcp",
+                    "inputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "outputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "created": "2024-02-25T11:40:49.761966Z",
+                    "modified": "2024-02-25T11:41:13.884147Z"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::gcp:sql/databaseInstance:DatabaseInstance::main",
+                    "custom": true,
+                    "id": "main-768796e",
+                    "type": "gcp:sql/databaseInstance:DatabaseInstance",
+                    "inputs": {
+                        "__defaults": [
+                            "deletionProtection",
+                            "name"
+                        ],
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": true,
+                        "name": "main-768796e",
+                        "region": "us-central1",
+                        "settings": {
+                            "__defaults": [
+                                "activationPolicy",
+                                "availabilityType",
+                                "diskAutoresize",
+                                "diskAutoresizeLimit",
+                                "diskType",
+                                "edition",
+                                "pricingPlan"
+                            ],
+                            "activationPolicy": "ALWAYS",
+                            "availabilityType": "ZONAL",
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "pricingPlan": "PER_USE",
+                            "tier": "db-f1-micro"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":2400000000000,\"delete\":1800000000000,\"update\":1800000000000}}",
+                        "availableMaintenanceVersions": [],
+                        "connectionName": "tactical-orbit-366415:us-central1:main-768796e",
+                        "databaseVersion": "POSTGRES_15",
+                        "deletionProtection": true,
+                        "dnsName": "",
+                        "firstIpAddress": "34.132.107.111",
+                        "id": "main-768796e",
+                        "instanceType": "CLOUD_SQL_INSTANCE",
+                        "ipAddresses": [
+                            {
+                                "ipAddress": "34.132.107.111",
+                                "timeToRetire": "",
+                                "type": "PRIMARY"
+                            },
+                            {
+                                "ipAddress": "34.68.29.159",
+                                "timeToRetire": "",
+                                "type": "OUTGOING"
+                            }
+                        ],
+                        "maintenanceVersion": "POSTGRES_15_4.R20230830.01_07",
+                        "masterInstanceName": "",
+                        "name": "main-768796e",
+                        "privateIpAddress": "",
+                        "project": "tactical-orbit-366415",
+                        "pscServiceAttachmentLink": "",
+                        "publicIpAddress": "34.132.107.111",
+                        "region": "us-central1",
+                        "replicaConfiguration": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:ufrMyfR78C+x7r8N:0l7DfUa459or04d+pfFnn5XK+TA="
+                        },
+                        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/tactical-orbit-366415/instances/main-768796e",
+                        "serverCaCerts": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:DmyGKvhfEq8/dy+s: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"
+                        },
+                        "serviceAccountEmailAddress": "p143825474172-xwpbo9@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+                        "settings": {
+                            "activationPolicy": "ALWAYS",
+                            "activeDirectoryConfig": null,
+                            "advancedMachineFeatures": null,
+                            "availabilityType": "ZONAL",
+                            "backupConfiguration": {
+                                "backupRetentionSettings": {
+                                    "retainedBackups": 7,
+                                    "retentionUnit": "COUNT"
+                                },
+                                "binaryLogEnabled": false,
+                                "enabled": false,
+                                "location": "",
+                                "pointInTimeRecoveryEnabled": false,
+                                "startTime": "10:00",
+                                "transactionLogRetentionDays": 7
+                            },
+                            "collation": "",
+                            "connectorEnforcement": "NOT_REQUIRED",
+                            "dataCacheConfig": null,
+                            "databaseFlags": [],
+                            "deletionProtectionEnabled": false,
+                            "denyMaintenancePeriod": null,
+                            "diskAutoresize": true,
+                            "diskAutoresizeLimit": 0,
+                            "diskSize": 10,
+                            "diskType": "PD_SSD",
+                            "edition": "ENTERPRISE",
+                            "insightsConfig": null,
+                            "ipConfiguration": {
+                                "allocatedIpRange": "",
+                                "authorizedNetworks": [],
+                                "enablePrivatePathForGoogleCloudServices": false,
+                                "ipv4Enabled": true,
+                                "privateNetwork": "",
+                                "pscConfigs": [],
+                                "requireSsl": false,
+                                "sslMode": ""
+                            },
+                            "locationPreference": {
+                                "followGaeApplication": "",
+                                "secondaryZone": "",
+                                "zone": "us-central1-c"
+                            },
+                            "maintenanceWindow": null,
+                            "passwordValidationPolicy": null,
+                            "pricingPlan": "PER_USE",
+                            "sqlServerAuditConfig": null,
+                            "tier": "db-f1-micro",
+                            "timeZone": "",
+                            "userLabels": {},
+                            "version": 1
+                        }
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "databaseVersion": null,
+                        "region": null,
+                        "settings": null
+                    },
+                    "additionalSecretOutputs": [
+                        "replicaConfiguration",
+                        "rootPassword",
+                        "serverCaCerts"
+                    ],
+                    "created": "2024-02-25T11:58:15.581724Z",
+                    "modified": "2024-02-25T11:58:15.581724Z",
+                    "sourcePosition": "project:///db.ts#17,20"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/pulumi-ts/dev",
+        "latest": {
+            "manifest": {
+                "time": "2024-02-25T13:41:16.094249+02:00",
+                "magic": "79b21111b057cd6762023edb0f73ac137b81a6c92f656b0dc4741a8258329594",
+                "version": "v3.102.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:B9sfGl0z4/4=:v1:qlsey0kbq/vkFBE8:MO2M+4lCtNNb9rgIaSxm08ublujIxA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "bucketName": "gs://my-bucket-52d53a4"
+                    },
+                    "created": "2024-02-25T11:40:49.475417Z",
+                    "modified": "2024-02-25T11:40:49.475417Z",
+                    "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0",
+                    "custom": true,
+                    "id": "c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "type": "pulumi:providers:gcp",
+                    "inputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "outputs": {
+                        "project": "tactical-orbit-366415",
+                        "version": "7.11.0"
+                    },
+                    "created": "2024-02-25T11:40:49.761966Z",
+                    "modified": "2024-02-25T11:41:13.884147Z"
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-ts::gcp:storage/bucket:Bucket::my-bucket",
+                    "custom": true,
+                    "id": "my-bucket-52d53a4",
+                    "type": "gcp:storage/bucket:Bucket",
+                    "inputs": {
+                        "__defaults": [
+                            "forceDestroy",
+                            "name",
+                            "storageClass"
+                        ],
+                        "forceDestroy": false,
+                        "location": "US",
+                        "name": "my-bucket-52d53a4",
+                        "storageClass": "STANDARD"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"read\":240000000000,\"update\":240000000000},\"schema_version\":\"1\"}",
+                        "autoclass": null,
+                        "cors": [],
+                        "customPlacementConfig": null,
+                        "defaultEventBasedHold": false,
+                        "effectiveLabels": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:eV4uPBheBWDzFQi7:KU8EDgqh/SsxwjqVQ3n9fvnJ"
+                        },
+                        "enableObjectRetention": false,
+                        "encryption": null,
+                        "forceDestroy": false,
+                        "id": "my-bucket-52d53a4",
+                        "labels": {},
+                        "lifecycleRules": [],
+                        "location": "US",
+                        "logging": null,
+                        "name": "my-bucket-52d53a4",
+                        "project": "tactical-orbit-366415",
+                        "publicAccessPrevention": "inherited",
+                        "pulumiLabels": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:9hR0eVgUZkRKkkhc:JHDau1X04583Wyv0f6awA76Z"
+                        },
+                        "requesterPays": false,
+                        "retentionPolicy": null,
+                        "rpo": "DEFAULT",
+                        "selfLink": "https://www.googleapis.com/storage/v1/b/my-bucket-52d53a4",
+                        "storageClass": "STANDARD",
+                        "uniformBucketLevelAccess": false,
+                        "url": "gs://my-bucket-52d53a4",
+                        "versioning": null,
+                        "website": null
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-ts::pulumi:pulumi:Stack::pulumi-ts-dev",
+                    "provider": "urn:pulumi:dev::pulumi-ts::pulumi:providers:gcp::default_7_11_0::c5d472d7-1be9-4d1d-a5f7-e5f90a88f231",
+                    "propertyDependencies": {
+                        "location": null
+                    },
+                    "additionalSecretOutputs": [
+                        "effectiveLabels",
+                        "pulumiLabels"
+                    ],
+                    "created": "2024-02-25T11:41:16.074313Z",
+                    "modified": "2024-02-25T11:41:16.074313Z",
+                    "sourcePosition": "project:///index.ts#5,16"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "kind": "update",
+    "startTime": 1708861272,
+    "message": "",
+    "environment": {
+        "exec.kind": "cli",
+        "pulumi.arch": "arm64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "darwin",
+        "pulumi.version": "v3.102.0",
+        "updatePlan": "false"
+    },
+    "config": {
+        "gcp:project": "tactical-orbit-366415"
+    },
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1708861276,
+    "resourceChanges": {
+        "create": 1,
+        "same": 1
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "kind": "update",
+    "startTime": 1708888356,
+    "message": "",
+    "environment": {
+        "exec.kind": "cli",
+        "pulumi.arch": "arm64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "darwin",
+        "pulumi.version": "v3.102.0",
+        "updatePlan": "false"
+    },
+    "config": {
+        "gcp:project": "tactical-orbit-366415",
+        "pulumi-ts:dbConfig": {
+            "databaseVersion": "POSTGRES_15",
+            "postgresPassword": {
+                "secure": "v1:mzCKnfBp0FCrqepp:iVuQFluPNu3lqmqSWO/HjWesiw4HkQ=="
+            },
+            "schemas": [
+                "test1",
+                "test2"
+            ]
+        },
+        "pulumi-ts:k8sVersion": "1.29.1-gke.1575000"
+    },
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1708888401,
+    "resourceChanges": {
+        "create": 2,
+        "same": 7,
+        "update": 1
+    }
+}
