@@ -1,5 +1,4 @@
 name: apply-pulumi
-run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches:
@@ -15,3 +14,11 @@ jobs:
       - run: pulumi version
       - run: npm ci
       - run: npm run test
+  preview:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: dev
