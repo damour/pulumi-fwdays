@@ -1,11 +1,11 @@
-name: learn-github-actions
+name: apply-pulumi
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches:
       - main
 jobs:
-  check-bats-version:
+  unit-tests:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -13,3 +13,5 @@ jobs:
         with:
           node-version: '21'
       - run: pulumi version
+      - run: npm i
+      - run: mocha -r ts-node/register db_test.ts
