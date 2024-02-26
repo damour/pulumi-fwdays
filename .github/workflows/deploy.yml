@@ -18,7 +18,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+      - run: npm ci
       - uses: pulumi/actions@v5
         with:
+          cloud-url: file://~
           command: preview
           stack-name: dev
