@@ -16,6 +16,7 @@ jobs:
       - run: npm run test
   preview:
     runs-on: ubuntu-22.04
+    needs: unit-tests
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
