@@ -6,6 +6,9 @@
         "mocha": "^9.0.0",
         "ts-node": "^9.1.1"
     },
+    "scripts": {
+        "test": "mocha -r ts-node/register db_test.ts"
+    },
     "dependencies": {
         "@pulumi/gcp": "^7.0.0",
         "@pulumi/postgresql": "^3.10.1",

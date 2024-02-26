@@ -14,4 +14,4 @@ jobs:
           node-version: '21'
       - run: pulumi version
       - run: npm ci
-      - run: mocha -r ts-node/register db_test.ts
+      - run: npm run test
