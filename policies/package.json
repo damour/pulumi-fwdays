@@ -1,0 +1,12 @@
+{
+    "name": "pulumi-fwdays-policies",
+    "version": "0.0.1",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/gcp": "^7.0.0",
+        "@pulumi/policy": "^1.10.0",
+        "@pulumi/pulumi": "^3.0.0"
+    }
+}
