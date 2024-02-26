@@ -23,6 +23,8 @@ jobs:
           node-version: '21'
       - run: npm ci
       - uses: pulumi/actions@v5
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
         with:
           cloud-url: file://~
           command: preview
