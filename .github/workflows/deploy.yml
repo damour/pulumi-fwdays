@@ -36,7 +36,7 @@ jobs:
           command: preview
           stack-name: dev
   apply:
-    if: github.event_name == 'pull_request'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-22.04
     needs: unit-tests
     steps:
