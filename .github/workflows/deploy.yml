@@ -36,6 +36,7 @@ jobs:
           stack-name: dev
           work-dir: ./base
   apply-base-dev:
+    needs: unit-tests
     uses: ./.github/workflows/apply.yml
     with:
       stack-name: dev
