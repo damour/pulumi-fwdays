@@ -41,3 +41,15 @@ jobs:
     with:
       stack-name: dev
       work-dir: ./base
+    secrets:
+      PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+      GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+  apply-app-dev:
+    needs: apply-base-dev
+    uses: ./.github/workflows/apply.yml
+    with:
+      stack-name: dev
+      work-dir: ./app
+    secrets:
+      PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+      GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}

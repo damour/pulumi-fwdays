@@ -9,6 +9,11 @@ on:
       work-dir:
         required: true
         type: string
+    secrets:
+      PULUMI_CONFIG_PASSPHRASE:
+        required: true
+      GOOGLE_CREDENTIALS:
+        required: true
 
 jobs:
   apply-base-dev:
