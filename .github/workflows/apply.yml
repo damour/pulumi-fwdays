@@ -1,0 +1,38 @@
+name: Reusable apply job
+
+on:
+  workflow_call:
+    inputs:
+      stack-name:
+        required: true
+        type: string
+      work-dir:
+        required: true
+        type: string
+
+jobs:
+  apply-base-dev:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    needs: unit-tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+      - run: npm ci
+      - run: npm ci
+        working-directory: ./policies
+      - uses: 'google-github-actions/auth@v2'
+        with:
+          # https://github.com/google-github-actions/auth?tab=readme-ov-file#service-account-key-json
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+      - uses: pulumi/actions@v5
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+        with:
+          cloud-url: gs://pulumi-tactical-orbit-366415
+          command: up
+          policyPacks: "../policies"
+          stack-name: ${{ inputs.stack-name }}
+          work-dir: ${{ inputs.work-dir }}
