@@ -6,14 +6,7 @@ on:
     branches: ["main"]
 jobs:
   unit-tests:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '21'
-      - run: npm ci
-      - run: npm run test
+    uses: ./.github/workflows/test.yml
   preview-base-dev:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-22.04
