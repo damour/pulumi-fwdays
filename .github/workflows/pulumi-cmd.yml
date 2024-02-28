@@ -1,8 +1,11 @@
-name: Reusable apply job
+name: Reusable pulumi job
 
 on:
   workflow_call:
     inputs:
+      command:
+        required: true
+        type: string
       stack-name:
         required: true
         type: string
@@ -16,8 +19,7 @@ on:
         required: true
 
 jobs:
-  apply:
-    if: github.ref == 'refs/heads/main'
+  run:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +38,7 @@ jobs:
           PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
         with:
           cloud-url: gs://pulumi-tactical-orbit-366415
-          command: up
+          command: ${{ inputs.command }}
           policyPacks: "../policies"
           stack-name: ${{ inputs.stack-name }}
           work-dir: ${{ inputs.work-dir }}

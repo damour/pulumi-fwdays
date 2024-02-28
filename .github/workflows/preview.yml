@@ -1,27 +1,27 @@
-name: apply-pulumi
+name: preview-pulumi
 on:
-  push:
+  pull_request:
     branches: ["main"]
 jobs:
   unit-tests:
     uses: ./.github/workflows/test.yml
-  apply-base-dev:
+  preview-base-dev:
     needs: unit-tests
     uses: ./.github/workflows/pulumi-cmd.yml
     with:
-      command: up
+      command: preview
       stack-name: dev
       work-dir: ./base
     secrets:
       PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-  apply-app-dev:
-    needs: apply-base-dev
+  preview-app-dev:
+    needs: preview-base-dev
     uses: ./.github/workflows/pulumi-cmd.yml
     with:
-      command: up
+      command: preview
       stack-name: dev
-      work-dir: ./app
+      work-dir: ./base
     secrets:
       PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
