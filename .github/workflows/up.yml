@@ -1,11 +1,11 @@
-name: apply-pulumi
+name: up-pulumi
 on:
   push:
     branches: ["main"]
 jobs:
   unit-tests:
     uses: ./.github/workflows/test.yml
-  apply-base-dev:
+  up-base-dev:
     needs: unit-tests
     uses: ./.github/workflows/pulumi-cmd.yml
     with:
@@ -15,7 +15,7 @@ jobs:
     secrets:
       PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-  apply-app-dev:
+  up-app-dev:
     needs: apply-base-dev
     uses: ./.github/workflows/pulumi-cmd.yml
     with:
