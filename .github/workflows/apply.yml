@@ -16,7 +16,7 @@ on:
         required: true
 
 jobs:
-  apply-base-dev:
+  apply:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-22.04
     steps:
