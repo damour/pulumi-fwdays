@@ -6,14 +6,14 @@ Stage 1:
 Stage 2:
 1. Написання Custom Component
 2. Робота з 3rd-party provider (Postgres)
-3. Роботи з secret & structured configuration
+3. Робота з secret & structured configuration
 
 Stage 3:
 1. Написання unit test
 2. Написання policy pack
 
 Stage 4:
-1. CI на Github Actions
+1. Новий app-проект + StackReference
 
 Stage 5:
-1. StackReference
+1. CI на Github Actions
